@@ -1,4 +1,4 @@
-<img src="https://infinitescript.com/wordpress/wp-content/uploads/2023/08/CityDreamer-Logo.png" height="150px" align="right">
+<img src="https://www.infinitescript.com/projects/CityDreamer/CityDreamer-Logo.png" height="150px" align="right">
 
 # CityDreamer: Compositional Generative Model of Unbounded 3D Cities
 
@@ -10,7 +10,7 @@ S-Lab, Nanyang Technological University
 [![arXiv](https://img.shields.io/badge/arXiv-2309.00610-b31b1b.svg)](https://arxiv.org/abs/2309.00610)
 [![YouTube](https://img.shields.io/badge/Spotlight%20Video-%23FF0000.svg?logo=YouTube&logoColor=white)](https://youtu.be/te4zinLTYz0)
 
-![Teaser](https://infinitescript.com/wordpress/wp-content/uploads/2023/08/CityDreamer-Teaser.jpg)
+![Teaser](https://www.infinitescript.com/projects/CityDreamer/CityDreamer-Teaser.jpg)
 
 ## Update
 
