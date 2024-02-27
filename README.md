@@ -14,18 +14,26 @@ S-Lab, Nanyang Technological University
 
 ## Update
 
+- [2023/02/27] The OSM and GoogleEarth datasets have been released.
 - [2023/08/15] The repo is created.
 
 ## Cite this work
 
 ```
-@journal{xie2023citydreamer,
-  title   = {City{D}reamer: Compositional Generative Model of Unbounded 3{D} Cities},
-  author  = {Xie, Haozhe and 
-             Chen, Zhaoxi and 
-             Hong, Fangzhou and 
-             Liu, Ziwei},
-  journal = {arXiv 2309.00610},
-  year    = {2023}
+@inproceedings{xie2024citydreamer,
+  title     = {City{D}reamer: Compositional Generative Model of Unbounded 3{D} Cities},
+  author    = {Xie, Haozhe and 
+               Chen, Zhaoxi and 
+               Hong, Fangzhou and 
+               Liu, Ziwei},
+  booktitle = {CVPR},
+  year      = {2024}
 }
 ```
+
+## Datasets
+
+The proposed OSM and GoogleEarth datasets are available below.
+
+- [OSM](https://gateway.infinitescript.com/s/OSM)
+- [GoogleEarth](https://gateway.infinitescript.com/s/GoogleEarth)
