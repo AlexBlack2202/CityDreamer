@@ -15,8 +15,9 @@ S-Lab, Nanyang Technological University
 
 ## Update
 
-- [2023/03/03] The hugging face demo is available.
-- [2023/02/27] The OSM and GoogleEarth datasets have been released.
+- [2024/03/28] The testing code is released.
+- [2024/03/03] The hugging face demo is available.
+- [2024/02/27] The OSM and GoogleEarth datasets have been released.
 - [2023/08/15] The repo is created.
 
 ## Cite this work
@@ -33,9 +34,83 @@ S-Lab, Nanyang Technological University
 }
 ```
 
-## Datasets
+## Datasets and Pretrained Models 🛢️
 
-The proposed OSM and GoogleEarth datasets are available below.
+The proposed OSM and GoogleEarth datasets  are available as below.
 
 - [OSM](https://gateway.infinitescript.com/s/OSM)
 - [GoogleEarth](https://gateway.infinitescript.com/s/GoogleEarth)
+
+The pretrained models are available as below.
+
+- [Unbounded Layout Generator](https://gateway.infinitescript.com/s/LayoutGen.pth)
+- [Background Stuff Generator](https://gateway.infinitescript.com/s/CityDreamer-Bgnd.pth)
+- [Building Instance Generator](https://gateway.infinitescript.com/s/CityDreamer-Fgnd.pth)
+
+## Installation📥
+
+Assume that you have installed [CUDA](https://developer.nvidia.com/cuda-downloads) and [PyTorch](https://pytorch.org) in your Python (or Anaconda) environment.  
+
+The CityDreamer source code is tested in PyTorch 1.13.1 with CUDA 11.7 in Python 3.8. You can use the following command to install PyTorch with CUDA 11.7.
+
+```bash
+pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117 --extra-index-url https://download.pytorch.org/whl/cu117
+```
+
+After that, the Python dependencies can be installed as following.
+
+```bash
+git clone https://github.com/hzxie/city-dreamer
+cd city-dreamer
+CITY_DREAMER_HOME=`pwd`
+pip install -r requirements.txt
+```
+
+The CUDA extensions can be compiled and installed with the following commands.
+
+```bash
+cd $CITY_DREAMER_HOME/extensions
+for e in `ls -d */`
+do
+  cd $CITY_DREAMER_HOME/extensions/$e
+  pip install .
+done
+```
+
+## Inference🚩
+
+Both the iterative demo and command line interface (CLI) by default load the pretrained models for Unbounded Layout Generator, Background Stuff Generator, and Building Instance Generator from `output/sampler.pth`, `output/gancraft-bg.pth`, and `output/gancraft-fg.pth`, respectively. You have the option to specify a different location using runtime arguments.
+
+```
+├── ...
+└── city-dreamer
+    └── demo
+    |   ├── ...
+    |   └── run.py
+    └── scripts
+    |   ├── ...
+    |   └── inference.py
+    └── output
+        ├── gancraft-bg.pth
+        ├── gancraft-fg.pth
+        └── sampler.pth
+```
+
+Moreover, both scripts feature runtime arguments `--patch_height` and `--patch_width`, which divide images into patches of size `patch_height`x`patch_width`. For a single NVIDIA RTX 3090 GPU with 24GB of VRAM, both patch_height and patch_width are set to 5. You can adjust the values to match your GPU's VRAM size.
+
+### Iterative Demo 🕹️
+
+```bash
+python3 demo/run.py
+```
+
+Then, open http://localhost:3186 in your browser.
+
+### Command Line Interface (CLI) 🤖
+
+```bash
+python3 scripts/inference.py
+```
+
+The generated video is located at `output/rendering.mp4`.
+
