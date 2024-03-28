@@ -114,3 +114,7 @@ python3 scripts/inference.py
 
 The generated video is located at `output/rendering.mp4`.
 
+## License
+
+This project is licensed under [NTU S-Lab License 1.0](https://github.com/hzxie/city-dreamer/blob/master/LICENSE). Redistribution and use should follow this license.
+
