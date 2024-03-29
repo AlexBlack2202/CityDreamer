@@ -44,9 +44,9 @@ The proposed OSM and GoogleEarth datasets  are available as below.
 
 The pretrained models are available as below.
 
-- [Unbounded Layout Generator](https://gateway.infinitescript.com/s/LayoutGen.pth)
-- [Background Stuff Generator](https://gateway.infinitescript.com/s/CityDreamer-Bgnd.pth)
-- [Building Instance Generator](https://gateway.infinitescript.com/s/CityDreamer-Fgnd.pth)
+- [Unbounded Layout Generator](https://gateway.infinitescript.com/?f=LayoutGen.pth)
+- [Background Stuff Generator](https://gateway.infinitescript.com/?f=CityDreamer-Bgnd.pth)
+- [Building Instance Generator](https://gateway.infinitescript.com/?f=CityDreamer-Fgnd.pth)
 
 ## Installation📥
 
